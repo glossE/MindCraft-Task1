@@ -1,0 +1,47 @@
+  <!-- token-input.component.html -->
+  <div class="token-container">
+    <div *ngFor="let token of tokens" class="token">
+      {{ token }}
+      <span (click)="removeToken(token)" class="remove-icon">&times;</span>
+    </div>
+    <input
+      [(ngModel)]="inputValue"
+      (keypress)="onKeyPress($event)"
+      (input)="onInput()"
+      placeholder="Type and press Enter to add tokens"
+      class="inner-input"
+    />
+    
+  </div>
+  <div *ngIf="suggestions.length > 0" class="autocomplete-dropdown">
+    <ul>
+      <li *ngFor="let suggestion of suggestions" (click)="selectSuggestion(suggestion)">
+        {{ suggestion }}
+      </li>
+    </ul>
+  </div>
+
+    <!-- token-input.component.html -->
+<div *ngIf="publicPromptService.promptOpen$ | async" class="prompt">
+  <div>
+    <label>Name:</label>
+    <input [(ngModel)]="promptData.name" />
+  </div>
+  <div>
+    <label>Last Name:</label>
+    <input [(ngModel)]="promptData.lastName" />
+  </div>
+  <div>
+    <label>Phone Number:</label>
+    <input [(ngModel)]="promptData.phoneNumber" />
+  </div>
+  <div>
+    <label>Address:</label>
+    <input [(ngModel)]="promptData.address" />
+  </div>
+  <div>
+    <label>Email:</label>
+    <input [(ngModel)]="promptData.email" />
+  </div>
+  <button (click)="submitPrompt()" style="display: block;">Submit</button>
+</div>

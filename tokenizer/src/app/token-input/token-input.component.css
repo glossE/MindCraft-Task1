@@ -1,0 +1,109 @@
+/* token-input.component.css */
+.token-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .token {
+    background-color: #e0e0e0;
+    padding: 4px 8px;
+    margin-right: 4px;
+    border-radius: 4px;
+  }
+  
+  .inner-input {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 4px;
+    flex: 1;
+  }
+  
+  .remove-icon {
+    cursor: pointer;
+    margin-left: 8px;
+    color: #888;
+  }
+  /* token-input.component.css */
+.autocomplete-dropdown {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  margin-top: 10px;
+}
+
+.autocomplete-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.autocomplete-dropdown li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.autocomplete-dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* token-input.component.css */
+.suggestions {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1;
+  margin-top: 10px; /* Adjusted margin-top to create space between suggestions and input box */
+}
+
+.suggestions div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions div:hover {
+  background-color: #e0e0e0;
+  
+}
+
+.prompt {
+  background-color: #fff;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+
+.prompt label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.prompt input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.prompt button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
